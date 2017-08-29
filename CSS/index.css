@@ -1,1 +1,13 @@
+/* CSS reset */
 
+@font-face {
+	/**/
+	}
+body {
+	background: gray;
+	background-image: url("wolf%20-%20breathing%20is%20not%20so%20important,%20living%20it%20is.jpg");
+	}
+
+	h1 {}
+
+	h2 {}

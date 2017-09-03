@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Teko"); /*Font styles for the different parts of the page. Search documentation about how optimize font loading times. */
 /* CSS reset */
 
     /* CSS reset
@@ -35,11 +36,10 @@
       border-spacing: 0;
       }
 
-	/* Brain Grenade styles */
+	/* ----- Iterations styles ----- */
 
-				@font-face {
-				/**/
-				}
+				 /* Search documentation to optimize loading times */
+
 				body {
 				background: black;
 				color: white;
@@ -48,12 +48,33 @@
 
 				/* Styles for the first article */
 				.wolf {
-					background: black url("../media/wolf%20-%20breathing%20is%20not%20so%20important,%20living%20it%20is.jpg") 50% no-repeat;
+					background: black url("../media/wolf%20-%20breathing%20is%20not%20so%20important,%20living%20it%20is%20-%20background.png") 50% no-repeat;
 					margin: 0;
 					height: 100vh; /* 1vh = 1/100 of the viewport/screen heigth. This unit is used to guarantee the element will cover the total amount of screen height available. */
+					background-size: cover;
 				}
 
 				.motto-cont {
-					position: relative;
+					font-family: Teko, sans-serif;
+					font-size: 5vh;
+					position: absolute; /* This property is used to move the container div element from the top-left corner of its article parent element and center it in the middle of the screen in a responsive manner. */
+					text-align: center;
 					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				.motto-cont img {
+					display: block;
+					transform: scale(1.75);
+					position: relative; /* The position relative is necessary for the z-index property to take effect, as it only applies to positioned elements. However the value of relative produces the desired scaled effect, otherwise, an absolute position will move the element relative to its parent element instead of relative to the image original position. */
+					z-index: -1;
+				}
+
+				.motto01-h2 {
+					z-index: 2;
+				}
+
+				.motto02-h1 {
+					z-index: 3;
 				}
